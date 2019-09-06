@@ -23,12 +23,14 @@ import favicon96x96 from 'images/favicon/favicon-96x96.png';
 import redDotFavicon16x16 from 'images/favicon/favicon-reddot-16x16.png';
 import redDotFavicon32x32 from 'images/favicon/favicon-reddot-32x32.png';
 import redDotFavicon96x96 from 'images/favicon/favicon-reddot-96x96.png';
+
 import MoreChannels from 'components/more_channels';
 import MoreDirectChannels from 'components/more_direct_channels';
 import QuickSwitchModal from 'components/quick_switch_modal';
 import NewChannelFlow from 'components/new_channel_flow';
 import UnreadChannelIndicator from 'components/unread_channel_indicator.jsx';
 import Pluggable from 'plugins/pluggable';
+
 
 import SidebarHeader from './header';
 import SidebarChannel from './sidebar_channel';
@@ -572,7 +574,9 @@ export default class Sidebar extends React.PureComponent {
                 renderThumbVertical={renderThumbVertical}
                 renderView={renderView}
                 onScroll={this.onScroll}
-                style={{position: 'absolute'}}
+                style={{
+                    backgroundColor: 'black'
+                }}
             >
                 <div
                     id='sidebarChannelContainer'

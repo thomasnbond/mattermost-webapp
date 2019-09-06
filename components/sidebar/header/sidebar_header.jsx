@@ -7,6 +7,7 @@ import * as Utils from 'utils/utils.jsx';
 import StatusDropdown from 'components/status_dropdown/index.jsx';
 
 import SidebarHeaderDropdown from './dropdown';
+import BondAvatar from '../../../images/BondAvatar.png';
 
 export default class SidebarHeader extends React.PureComponent {
     constructor(props) {
@@ -33,19 +34,27 @@ export default class SidebarHeader extends React.PureComponent {
         const ariaLabel = Utils.localizeMessage('accessibility.sections.lhsHeader', 'team menu region');
 
         return (
-            <div
-                id='lhsHeader'
-                aria-label={ariaLabel}
-                tabIndex='-1'
-                role='application'
-                className='SidebarHeader team__header theme a11y__region'
-                data-a11y-sort-order='5'
-            >
+
+            <div style={{backgroundColor: 'black', textAlign: 'center'}}>
+             
+                <a href="http://localhost:3000">
+                    <img src={BondAvatar} height="60" width="40"/>
+                </a>
                 <div
-                    className='d-flex'
+                    id='lhsHeader'
+                    aria-label={ariaLabel}
+                    tabIndex='-1'
+                    role='application'
+                    className='SidebarHeader team__header theme a11y__region'
+                    data-a11y-sort-order='5'
+                    style={{backgroundColor: 'black'}}
                 >
-                    {!this.state.isMobile && <StatusDropdown/>}
-                    <SidebarHeaderDropdown/>
+                    <div
+                        className='d-flex'
+                    >
+                        {!this.state.isMobile && <StatusDropdown/>}
+                        <SidebarHeaderDropdown/>
+                    </div>
                 </div>
             </div>
         );

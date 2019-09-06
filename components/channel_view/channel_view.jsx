@@ -175,6 +175,7 @@ export default class ChannelView extends React.PureComponent {
             >
                 <FileUploadOverlay overlayType='center'/>
                 <ChannelHeader
+                    style={{backgroundColor: 'black'}}
                     channelId={this.props.channelId}
                 />
                 <DeferredPostView
